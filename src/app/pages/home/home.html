@@ -1,0 +1,45 @@
+<div class="container py-5">
+
+  <!-- 🔥 AJOUT IMPORTANT -->
+  <app-step-list></app-step-list>
+
+  <!-- ARTISANS DU MOIS -->
+  <section class="mt-5">
+    <h2 class="mb-4">Les artisans du mois</h2>
+
+    <div class="row g-4">
+      @for (artisant of topArtisants(); track artisant.id) {
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <a [routerLink]="['/artisan', artisant.id]" class="text-decoration-none">
+
+          <div class="card-custom p-4 h-100">
+
+            <h3 class="h5 mb-3">{{ artisant.name }}</h3>
+
+            <p class="mb-2">
+              <strong>Note :</strong>
+              @for (star of getStars(artisant.rate); track $index) {
+              <span class="star" [class.filled-star]="star.filled">★</span>
+              }
+              ({{ artisant.rate }}/5)
+            </p>
+
+            <p class="mb-2">
+              <strong>Spécialité :</strong> {{ artisant.specialty }}
+            </p>
+
+            <p class="mb-0">
+              <strong>Ville :</strong> {{ artisant.location }}
+            </p>
+
+          </div>
+
+        </a>
+      </div>
+
+      }
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,11 @@
+<section>
+  <h2 class="mb-4">Comment trouver mon artisan ?</h2>
+
+  <div class="row g-4">
+    @for (step of steps(); track step.id) {
+    <div class="col-12 col-md-6">
+      <app-step [step]="step"></app-step>
+    </div>
+    }
+  </div>
+</section>

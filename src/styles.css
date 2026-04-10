@@ -1,1 +1,146 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* ========================= */
+/* POLICE LOCALE - GRAPHIK */
+/* ========================= */
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('/police/Graphik-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('/police/Graphik-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ========================= */
+/* VARIABLES GLOBALES */
+/* ========================= */
+
+:root {
+  --color-background: #f1f8fc;
+  --color-primary: #0074c7;
+  --color-primary-dark: #00497c;
+  --color-text: #384050;
+  --color-accent-red: #cd2c2e;
+  --color-accent-green: #82b864;
+}
+
+/* ========================= */
+/* STYLE GLOBAL */
+/* ========================= */
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Graphik', Arial, Helvetica, sans-serif; /* 👈 Graphik ici */
+  margin: 0;
+}
+
+/* ========================= */
+/* LIENS */
+/* ========================= */
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* ========================= */
+/* TITRES */
+/* ========================= */
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+/* ========================= */
+/* BOUTONS */
+/* ========================= */
+
+.btn-custom {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: var(--color-primary-dark);
+  color: white;
+}
+
+/* ========================= */
+/* ACCENTS */
+/* ========================= */
+
+.text-accent-red {
+  color: var(--color-accent-red);
+}
+
+.text-accent-green {
+  color: var(--color-accent-green);
+}
+
+/* ========================= */
+/* CARTES */
+/* ========================= */
+
+.card-custom {
+  background-color: var(--color-primary-dark);
+  color: white;
+  border: 1px solid var(--color-primary-dark);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-custom h1,
+.card-custom h2,
+.card-custom h3,
+.card-custom h4,
+.card-custom h5,
+.card-custom h6,
+.card-custom p,
+.card-custom strong,
+.card-custom label {
+  color: white;
+}
+
+.card-custom a {
+  color: #f1f8fc;
+}
+
+.card-custom a:hover {
+  color: var(--color-accent-green);
+}
+
+/* ========================= */
+/* ÉTOILES */
+/* ========================= */
+
+.star {
+  color: #bfc7cf !important;
+  font-size: 1.2rem;
+}
+
+.star.filled-star {
+  color: var(--color-accent-red) !important;
+}

@@ -1,0 +1,29 @@
+<header class="bg-white shadow-sm py-3">
+  <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
+
+    <!-- Logo -->
+    <a routerLink="/" class="fs-4 fw-bold text-decoration-none">
+      Trouve ton artisan
+    </a>
+
+    <!-- Navigation -->
+    <nav class="d-flex flex-wrap gap-3">
+      <a [routerLink]="['/artisants', 'batiment']">Bâtiment</a>
+      <a [routerLink]="['/artisants', 'services']">Services</a>
+      <a [routerLink]="['/artisants', 'fabrication']">Fabrication</a>
+      <a [routerLink]="['/artisants', 'alimentation']">Alimentation</a>
+    </nav>
+
+    <!-- Recherche -->
+    <form class="d-flex gap-2" (ngSubmit)="onSearch()">
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchTerm" placeholder="Rechercher un artisan"
+        required />
+      <button class="btn btn-custom" type="submit" [disabled]="!searchTerm.trim()">
+        Rechercher
+      </button>
+    </form>
+
+  </div>
+</header>
+
+`
